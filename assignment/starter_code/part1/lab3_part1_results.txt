@@ -1,0 +1,258 @@
+t   t   t   e   e   n
+s   l   n   w   w   s
+            s   l    
+Test Case:           0
+            sg                              3
+                                           13
+                                           23
+Test Case:           1
+    el                                     33
+es  el          lg                         43
+es              lg                         53
+es              lg                         63
+es              lg                         73
+es              lg                         83
+es              lg                         93
+es              ly                        103
+es              ly                        113
+es                                        123
+es          sg                            133
+es          sg                            143
+            sg                            153
+            sg                            163
+            sg                            173
+            sg                            183
+            sg                            193
+            sy                            203
+            sy                            213
+                                          223
+                                          233
+                                          243
+                                          253
+                                          263
+                                          273
+                                          283
+                                          293
+                                          303
+                                          313
+                                          323
+                                          333
+                                          343
+Test Case:           2
+        ns                                353
+        ns          ng                    363
+        ns          ng                    373
+        ns          ng                    383
+                    ng                    393
+                    ng                    403
+                    ng                    413
+                    ng                    423
+                    ng                    433
+                    ny                    443
+                    ny                    453
+                                          463
+                                          473
+                                          483
+                                          493
+                                          503
+                                          513
+                                          523
+                                          533
+                                          543
+                                          553
+                                          563
+                                          573
+                                          583
+Test Case:           3
+        ns                                593
+        ns          ng                    603
+        ns          ng                    613
+        ns          ng                    623
+        ns          ng                    633
+        ns          ng                    643
+        ns          ng                    653
+        ns          ng                    663
+        ns          ng                    673
+        ns          ng                    683
+    el  ns          ng                    693
+    el  ns          ng                    703
+    el  ns          ng                    713
+    el  ns          ng                    723
+    el  ns          ng                    733
+    el  ns          ng                    743
+    el  ns          ng                    753
+    el  ns          ng                    763
+    el  ns          ng                    773
+    el  ns          ng                    783
+    el  ns          ny                    793
+    el  ns          ny                    803
+    el  ns                                813
+    el  ns      lg                        823
+    el  ns      lg                        833
+    el  ns      lg                        843
+    el  ns      lg                        853
+    el  ns      lg                        863
+    el  ns      lg                        873
+    el  ns      lg                        883
+    el          lg                        893
+                lg                        903
+                lg                        913
+                ly                        923
+                ly                        933
+                                          943
+                                          953
+                                          963
+                                          973
+                                          983
+                                          993
+                                         1003
+                                         1013
+                                         1023
+                                         1033
+                                         1043
+                                         1053
+                                         1063
+                                         1073
+                                         1083
+                                         1093
+Test Case:           4
+es  el  ns                               1103
+es  el  ns          ng                   1113
+es  el  ns          ng                   1123
+es  el  ns          ng                   1133
+es  el  ns          ng                   1143
+es  el  ns          ng                   1153
+es  el  ns          ng                   1163
+es  el  ns          ng                   1173
+es  el  ns          ng                   1183
+es  el  ns          ng                   1193
+es  el  ns          ng                   1203
+es  el  ns          ny                   1213
+es  el  ns          ny                   1223
+es  el  ns                               1233
+es  el  ns  sg                           1243
+es  el  ns  sg                           1253
+es  el  ns  sg                           1263
+es  el  ns  sg                           1273
+es  el  ns  sg                           1283
+es  el  ns  sg                           1293
+es  el  ns  sg                           1303
+es  el  ns  sg                           1313
+es  el  ns  sg                           1323
+es  el  ns  sg                           1333
+es  el  ns  sy                           1343
+es  el  ns  sy                           1353
+es  el  ns                               1363
+es  el  ns      lg                       1373
+es  el  ns      lg                       1383
+es  el  ns      lg                       1393
+es  el  ns      lg                       1403
+es  el  ns      lg                       1413
+es  el  ns      lg                       1423
+es  el  ns      lg                       1433
+es  el  ns      lg                       1443
+es  el  ns      lg                       1453
+es  el  ns      lg                       1463
+es  el  ns      ly                       1473
+es  el  ns      ly                       1483
+es  el  ns                               1493
+es  el  ns          ng                   1503
+es  el  ns          ng                   1513
+es  el  ns          ng                   1523
+es  el  ns          ng                   1533
+es  el  ns          ng                   1543
+es  el  ns          ng                   1553
+es  el  ns          ng                   1563
+es  el  ns          ng                   1573
+es  el  ns          ng                   1583
+es  el  ns          ng                   1593
+es  el  ns          ny                   1603
+es  el  ns          ny                   1613
+es  el  ns                               1623
+es  el  ns  sg                           1633
+es  el  ns  sg                           1643
+es  el  ns  sg                           1653
+es  el  ns  sg                           1663
+es  el  ns  sg                           1673
+es  el  ns  sg                           1683
+es  el  ns  sg                           1693
+es  el  ns  sg                           1703
+es  el  ns  sg                           1713
+es  el  ns  sg                           1723
+es  el  ns  sy                           1733
+es  el  ns  sy                           1743
+es  el  ns                               1753
+es  el  ns      lg                       1763
+es  el  ns      lg                       1773
+es  el  ns      lg                       1783
+es  el  ns      lg                       1793
+es  el  ns      lg                       1803
+es  el  ns      lg                       1813
+es  el  ns      lg                       1823
+es  el  ns      lg                       1833
+es  el  ns      lg                       1843
+es  el  ns      lg                       1853
+es  el  ns      ly                       1863
+es  el  ns      ly                       1873
+es  el  ns                               1883
+es  el  ns          ng                   1893
+es  el  ns          ng                   1903
+es  el  ns          ng                   1913
+es  el  ns          ng                   1923
+es  el  ns          ng                   1933
+es  el  ns          ng                   1943
+es  el  ns          ng                   1953
+es  el  ns          ng                   1963
+es  el  ns          ng                   1973
+es  el  ns          ng                   1983
+es  el  ns          ny                   1993
+es  el  ns          ny                   2003
+es  el  ns                               2013
+es  el  ns  sg                           2023
+es  el  ns  sg                           2033
+es  el  ns  sg                           2043
+es  el  ns  sg                           2053
+es  el  ns  sg                           2063
+es  el  ns  sg                           2073
+es  el  ns  sg                           2083
+es  el  ns  sg                           2093
+es      ns  sg                           2103
+es      ns  sg                           2113
+es      ns  sy                           2123
+es      ns  sy                           2133
+es      ns                               2143
+es      ns          ng                   2153
+es      ns          ng                   2163
+es      ns          ng                   2173
+es      ns          ng                   2183
+es      ns          ng                   2193
+es      ns          ng                   2203
+es      ns          ng                   2213
+es      ns          ng                   2223
+es      ns          ng                   2233
+es      ns          ng                   2243
+es      ns          ny                   2253
+es      ns          ny                   2263
+es      ns                               2273
+es      ns  sg                           2283
+es      ns  sg                           2293
+            sg                           2303
+            sg                           2313
+            sg                           2323
+            sg                           2333
+            sg                           2343
+            sy                           2353
+            sy                           2363
+                                         2373
+                                         2383
+                                         2393
+                                         2403
+                                         2413
+                                         2423
+                                         2433
+                                         2443
+                                         2453
+                                         2463
+                                         2473
+                                         2483
+                                         2493
