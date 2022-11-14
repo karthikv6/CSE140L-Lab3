@@ -62,14 +62,41 @@ module traffic_light_controller(
 			   build on part 1
 			   round-robin priority for four other direcions
                 */
+				if(sb) begin
+					if(ctrl10 > 10) next_state = YRRRR;
+				end
+				else if (!s) begin
+					if(ctr5 > 4) next_state = YRRRR;
+					else next_state = GRRRR;
+					if(!s) next_ctr5 += 1;
+				end
+				else begin
+					next_state = GRRRR;
+					next_ctr10 += 1;
+				end
 	         end      
 	  RGRRR: begin 		                                 // EL+ES green
               // ** fill in the guts **
-	         end
+			if (ctr5 > 4) begin
+				if(!e) next_state = RYRRR;
+	        end
+			else if(ctr10 > 10) begin
+				if(eb) next_state = RYRRR;
+			end
+			else begin
+				next_state = RGRRR
+				if(!e) next_ctr5 += 1;
+			end
+
 	  RYRRR: next_state = RZRRR;
 	  RZRRR: next_state = RHRRR;
 	  RHRRR: begin
-             // ** fill in the guts **
+		if(w) next_state = RRGRR;
+		else if (e) next_state = RGRRR;
+		else if (l) next_state = RRRGR;
+		else if (n) next_state = RRRRG;
+		else if (s) next_state = GRRRR;
+		else next_state = RHRRR;
       end
 
 	  RRGRR: begin 

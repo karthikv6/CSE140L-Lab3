@@ -14,7 +14,7 @@ module traffic_light_controller1(
 
 // HRR = red-red following YRR; RRH = red-red following RRY;
 // ZRR = 2nd cycle yellow, follows YRR, etc. 
-  typedef enum {GRR, YRR, ZRR, HRR, RGR, RYR, RZR, RHR, RRG, RRY, RRZ, RRH} tlc_states;  
+  typedef enum logic[3:0] {GRR, YRR, ZRR, HRR, RGR, RYR, RZR, RHR, RRG, RRY, RRZ, RRH} tlc_states;  
   tlc_states    present_state, next_state;
   integer ctr5, next_ctr5,       //  5 sec timeout when my traffic goes away
           ctr10, next_ctr10;     // 10 sec limit when other traffic presents
@@ -31,7 +31,8 @@ module traffic_light_controller1(
 	  present_state <= next_state;
       ctr5          <= next_ctr5;
       ctr10         <= next_ctr10;
-    end  
+    end
+	 
 
 // combinational part of state machine ("C1" block in the Harris & Harris Moore machine diagram)
 // default needed because only 6 of 8 possible states are defined/used
@@ -39,14 +40,97 @@ module traffic_light_controller1(
     next_state = RRH;            // default to reset state
     next_ctr5  = 0; 	         // default to clearing counters
     next_ctr10 = 0;
-    case(present_state)
-/* ************* Fill in the case statements ************** */
-	  GRR: begin 
-         // when is next_state GRR? YRR?
+	case(present_state)
+			
+	GRR: 
+			if (ctr5 >= 4 || ctr10 >= 9)					next_state = YRR;
+	
+			else if(((ctr5 > 0 || ctr10 > 0) || !ew_str_sensor) || (ns_sensor || ew_left_sensor)) begin 
+			
+				if( ctr5 > 0 || !ew_str_sensor) next_ctr5 = ctr5 + 1;
+				else;
+				
+				if (ctr10 > 0 || (ns_sensor || ew_left_sensor))	next_ctr10 = ctr10 + 1;
+				else;
+					next_state = GRR;
+																	
+			end
+			
+			elsenext_state = GRR;
+		
+	YRR:  begin
+          next_state = ZRR; 
+          next_ctr5 = 0;
+          next_ctr10 = 0;
+			end
+	ZRR: next_state = HRR;
+	
+	HRR:	if(ew_left_sensor)   	next_state = RGR;
+			else if(ns_sensor)   	next_state = RRG;
+			else if(ew_str_sensor)	next_state = GRR;
+			else							next_state = HRR;
+	
+	RGR:  
+			if (ctr5 >= 4 || ctr10 >= 9)next_state = RYR;
+	
+			else if(((ctr5 > 0 || ctr10 > 0) || !ew_left_sensor) || (ns_sensor || ew_str_sensor)) begin 
+			
+				if( ctr5 > 0 || !ew_left_sensor)next_ctr5 = ctr5 + 1;
+				else;
+				
+				if (ctr10 > 0 || (ns_sensor || ew_str_sensor))	next_ctr10 = ctr10 + 1;
+				else;
+					next_state = RGR;
+																	
+			end
+			
+			else next_state = RGR;
+	
+	RYR:  begin
+          next_state = RZR;
+          next_ctr5 = 0;
+          next_ctr10 = 0;
+			end
+	RZR: next_state = RHR;
+	
+	RHR:	if(ns_sensor)				next_state = RRG;
+			else if(ew_str_sensor)	next_state = GRR;
+			else if(ew_left_sensor)	next_state = RGR;
+			else	next_state = RHR;
+	
+	RRG:	
+			if (ctr5 >= 4 || ctr10 >= 9)	next_state = RRY;
+	
+			else if(((ctr5 > 0 || ctr10 > 0) || !ns_sensor) || (ew_left_sensor || ew_str_sensor)) begin 
+			
+				if( ctr5 > 0 || !ns_sensor)	next_ctr5 = ctr5 + 1;
+				else;
+				
+				if (ctr10 > 0 || (ew_left_sensor || ew_str_sensor))	next_ctr10 = ctr10 + 1;
+				else;
+					next_state = RRG;
+																	
+			end
+			
+			else	next_state = RRG;
+	
+	RRY:	begin
+          next_state = RRZ; 
+          next_ctr5 = 0;
+          next_ctr10 = 0;
+			end
+	
+	RRZ: next_state = RRH;
+	
+	RRH:	if(ew_str_sensor)			next_state = GRR;
+			else if(ew_left_sensor)	next_state = RGR;
+			else if(ns_sensor)		next_state = RRG;
+			else							next_state = RRH;
+			
+	endcase
          // what does ctr5 do? ctr10?
-      end  
-     // etc. 
-    endcase
+
+	 
   end
 
 // combination output driver  ("C2" block in the Harris & Harris Moore machine diagram)
